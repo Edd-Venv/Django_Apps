@@ -1,2 +1,2 @@
 # Django_test
-Simple test
+Site with an Todo Applicationa and a Bills counter, both are underdevelopent.
