@@ -8,7 +8,7 @@ class Todo(models.Model):
     created_at = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return self.title  # this def displays the todotitle on the admin page instead of todoObject
+        return self.title  
 
 
 class Bills(models.Model):
