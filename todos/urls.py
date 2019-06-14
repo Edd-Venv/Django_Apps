@@ -15,10 +15,4 @@ urlpatterns = [
     path('apps/bills/amounts/', views.addamount, name='addamount'),
     path('amounts/', views.addamount, name='addamount'),
     path('details/details/<int:pk>/deletetodo', views.deletetodo, name='deletetodo'),
-    #path('details/details/<int:pk>/deletetodo', views.redirect_view1),
 ]
-# path('', views.home, name='home'),
-# path('todos/add/', views.add, name='add'),
-# path('add/', views.add, name='add'), I need to add this path and
-# also redirect it to /todos/ not todos/#
-# note how i used redirect_view to go to another url
