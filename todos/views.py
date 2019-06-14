@@ -3,18 +3,6 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 
-# def index(request):
-    # return HttpResponse("To do list")
-
-# def index(request):
-#     return render(request, 'index.html')
-# added context which is a dictionary to show my name in the html file  hello from {{name}}
-# def index(request):
-#     context = {
-#         'name': 'Edwin'
-#     }
-#     return render(request, 'index.html', context)
-
 from .models import Todo
 from .models import Bills
 
@@ -52,8 +40,6 @@ def home(request):
 
     return render(request, 'home.html')
 
-# HttpResponse("Welcome to the home page, add a /todos/ or /admin/ to access them respectively. :) ")
-
 
 def flexbox(request):
     return render(request, 'FlexBox.html')
@@ -80,7 +66,6 @@ def addamount(request):
 
 
 def indexBills(request):
-    # bills = Bills.objects.all()[:10]
     context = {
         'bills': Bills.objects.all()[:10]
     }
@@ -101,7 +86,3 @@ def deletetodo(request, pk):
         d.delete()
     return redirect('/todos/')
 
-
-# def redirect_view1(request):
-#     response = redirect('/apps/todos/')
-#     return response
