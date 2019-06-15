@@ -13,24 +13,49 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     </head>
 <header>
-    <h1><i><big>Enter A Todo Title And Text</big></i></h1>
+    <h1><i><big>New Todo </big></i></h1>
     <hr/>
 </header>
 <body style="background-color: brown;">
+<main>
+    <div class = "flex-container">
+        <div style=" background: brown;
+  border: 2px solid grey;
+  width: 20%; height: 40%;
+  margin-top: 8%;
+  margin-left: 40%;
+  padding-bottom: 20%;
+  box-shadow: 2px 2px 2px grey;
+  align-content: flex-end;" >
 <form action="/add/" method="post">
     {% csrf_token %}
+
     <label for="title" style="font-size: 1.4em;"><big>Title:</big></label>
     <br>
     <input id="title" type="text"
-           name="title" maxlength="20" required>
+           name="title" maxlength="20" style="width: 100%" required>
     <br>
     <br/>
     <label for="text" style="font-size: 1.4em;"><big>Text: </big></label><br/>
-    <textarea name="text" id="text"></textarea>
+    <textarea name="text" id="text" style="width: 100%" required></textarea>
     <br>
     <br>
     <input type="submit" value="Submit"/>
-</form>
+</form></div>
+    </div>
+    </div>
+</main>
 </body>
-<a href="/todos/" style="color:white;">Go Back</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <a href="/todos/" style="color:white;">
+        <input type="submit" value="Cancel"/></a>
+    </footer>
 </html>
