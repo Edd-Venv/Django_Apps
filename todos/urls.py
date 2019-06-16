@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from .views import redirect_view
+from .views import deletetodo
 
 app_name = 'todos'
 urlpatterns = [
@@ -14,5 +15,5 @@ urlpatterns = [
     path('apps/bills/', views.indexBills, name='indexBills'),
     path('apps/bills/amounts/', views.addamount, name='addamount'),
     path('amounts/', views.addamount, name='addamount'),
-    path('details/details/<int:pk>/deletetodo', views.deletetodo, name='deletetodo'),
+    path('deletetodo/<int:pk>/', deletetodo),
 ]
