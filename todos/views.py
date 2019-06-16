@@ -16,7 +16,7 @@ def index(request):
 
 
 def details(request, pk):
-    todo = Todo.objects.get(pk=pk)#Note the pk=pk and the url.
+    todo = Todo.objects.get(pk=pk)
     context = {'todo': todo
                }
 
@@ -49,6 +49,14 @@ def redirect_view(request):
     response = redirect('/todos/')
     return response
 
+def deletetodo(request, pk):
+    todo_to_delete = Todo.objects.get(pk=pk)
+    if request.method == 'POST':
+        todo_to_delete.delete()
+        return redirect('/todos/')
+    else:
+        return render(request, 'details.html')
+
 
 # Bills Views below
 
@@ -73,16 +81,10 @@ def indexBills(request):
 
 
 def detailsBills(request, pk):
-    bill = Bills.objects.get(pk=pk)#Note the pk=pk and the url.
+    bill = Bills.objects.get(pk=pk)
     context = {'bill': bill
                }
 
     return render(request, 'detailsBills.html', context)
 
-
-def deletetodo(request, pk):
-    if request.method == 'POST':
-        d = Bills.objects.get(pk=pk)
-        d.delete()
-    return redirect('/todos/')
 
