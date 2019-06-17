@@ -11,7 +11,7 @@ def index(request):
     todos = Todo.objects.all()[:10]
     context = {
         'todos': todos
-    }
+              }
     return render(request, 'index.html', context)
 
 
@@ -19,7 +19,6 @@ def details(request, pk):
     todo = Todo.objects.get(pk=pk)
     context = {'todo': todo
                }
-
     return render(request, 'details.html', context)
 
 
@@ -37,12 +36,11 @@ def add(request):
 
 
 def home(request):
-
     return render(request, 'home.html')
 
 
 def flexbox(request):
-    return render(request, 'FlexBox.html')
+    return render(request, 'Applications.html')
 
 
 def redirect_view(request):
