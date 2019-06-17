@@ -10,7 +10,7 @@ urlpatterns = [
     path('details/<int:pk>', views.details, name='details'),
     path('todos/add/', views.add, name='add'),
     path('add/', views.add, name='add'),
-    path('apps/', views.flexbox, name='flexbox'),
+    path('apps/', views.appilcations, name='applications'),
     path('apps/todos/', redirect_view),
     path('apps/bills/', views.indexBills, name='indexBills'),
     path('apps/bills/amounts/', views.addamount, name='addamount'),
