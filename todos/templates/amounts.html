@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bills Application.">
+    <meta name="description" content="Todo Application.">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,20 +11,53 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     </head>
+    <header>
+    <h1><i><big>New Bill </big></i></h1>
+    <hr/>
+</header>
+<body style="background-color: brown;">
+<main>
+    <div class = "flex-container">
+        <div style=" background: brown;
+        color: black;
+        border: 0px solid grey;
+        width: 30%; height: 48%;
+        margin-top: 8%;
+        margin-left: 35%;
+        padding-bottom: 20%;
+        box-shadow: 0px 0px 0px grey;
+        align-content: flex-end;" >
 <form action="/amounts/" method="post" >
     {% csrf_token %}
-    <label for="title">Name Of Bill:</label>
+
+    <label for="title" style=" font-size: 1.2em;">Name Of Bill:</label>
     <br>
     <input id="title" type="text"
-           name="title" maxlength="20">
+           name="title" maxlength="20" style="width: 100%; background-color:
+           lightgrey; box-shadow: 2px 2px 2px grey; font-size: 1.4em;" required>
     <br>
     <br/>
-    <label for="amount">Amount: </label><br/>
+    <label for="amount" style=" font-size: 1.2em;">Amount: </label><br/>
     <input id="amount" type="number"
-           name="amount" maxlength="20">
+           name="amount" maxlength="20" style="width: 100%; background-color:
+           lightgrey; box-shadow: 2px 2px 2px grey; font-size: 1.4em;" required>
     <br>
     <br>
-    <input type="submit" value="Submit"/>
+    <input type="submit" value="Submit" style="font-size: 1.2em;"/>
 </form>
-<a href="/bills/">Go Back</a>
+</div>
+    </div></div>
+</main>
+</body>
+<br>
+   <br>
+     <br>
+       <br>
+    <br>
+  <br>
+<br>
+<footer>
+<a href="/bills/"style="color:white;">
+    <input type="submit" value="Cancel"/></a>
+    </footer>
 </html>
