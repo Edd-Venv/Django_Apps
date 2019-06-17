@@ -13,37 +13,50 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
+<style>
+    
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  }
+    
+  th, td {
+  padding: 3px;
+  text-align: left;
+  }
+    
+</style>
 </head>
-<body>
+   <body style="Background-color:Brown">
 <header>
-    <h1 id="myh1">List Of Bills</h1>
+   <h1 id="myh1" style="margin-top:20px;">Table Of Bills</h1>
     <hr>
 </header>
-<caption><h2>Bill's Entered</h2></caption>
-
-{% for bill in bills %}
-<div style="overflow-x:auto; table-layout: auto;">
-<table>
-    <thead>
-    <tr>
-        <th rowspan="2" colspan="3" id="liEd"><big>{{bill.title}}</big></th>
+  <br/>
+    <div>
+       <table style="width:35%">
+          <thead>
+            <tr>
+             <th>BillName</th>
+               <td>Cost</td>
+            </tr>
+         {% for bill in bills %}
+     <tr>
+        <td style="font-size:2em;">
+            <big>{{bill.title}}</big></td>
+        <td style="font-size:2.5em;">{{bill.amount}}</td>
     </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>{{bill.amount}}</td>
-    </tr>
-    </tbody>
+        {% endfor %}
+         </thead>
+       <tbody>
+     <tr>
+   </tr>
 </table>
     </div>
-{% endfor %}
-
-
-<a href="amounts/">Add Bill</a>
-<br>
-<a href="/apps">Applications</a>
-<br/>
-<a href='/'>Home</a>
-</body>
-
+       <a href="amounts/">Add Bill</a>
+         <br>
+          <a href="/apps">Applications</a>
+        <br/>
+     <a href='/'>Home</a>
+  </body>
 </html>
