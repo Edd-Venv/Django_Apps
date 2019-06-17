@@ -33,25 +33,24 @@
     <hr>
 </header>
   <br/>
-    <div>
-       <table style="width:35%">
-          <thead>
-            <tr>
-             <th>BillName</th>
-               <td>Cost</td>
-            </tr>
-         {% for bill in bills %}
-     <tr>
-        <td style="font-size:2em;">
-            <big>{{bill.title}}</big></td>
+    <div class="table-responsive">
+       <table class=" table-striped table-hover" style=" color: black; width:20%">
+         <thead>
+             <tr>
+          <th>BillName</th>
+        <td><big>Cost</big></td>
+      </tr>
+   </thead>
+  <tbody>
+{% for bill in bills %}
+   <tr>
+      <td style="font-size:2em;">
+          <big>{{bill.title}}</big></td>
         <td style="font-size:2.5em;">{{bill.amount}}</td>
-    </tr>
-         {% endfor %}
-         </thead>
-       <tbody>
-     <tr>
-   </tr>
-</table>
+      </tr>
+ {% endfor %}
+</tbody>
+ </table>
     </div>
        <a href="amounts/">Add Bill</a>
          <br>
