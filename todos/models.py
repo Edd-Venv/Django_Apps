@@ -13,7 +13,7 @@ class Todo(models.Model):
 
 class Bills(models.Model):
     title = models.CharField(max_length=20)
-    amount = models.IntegerField()
+    amount = models.PositiveSmallIntegerField(null=True)
     created_at = models.DateField(default=datetime.now, blank=True)
 
     def __str__(self):
