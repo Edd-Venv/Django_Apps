@@ -30,17 +30,18 @@
             
 <form action="/add/" method="post">
     {% csrf_token %}
-    <label for="title" style="font-size: 1.4em;"><big>Title:</big></label>
-    <br>
-    <input id="title" type="text"
-           name="title" maxlength="20" style="width: 100%" required>
-    <br>
-    <br/>
-    <label for="text" style="font-size: 1.4em;"><big>Text: </big></label><br/>
-    <textarea name="text" id="text" style="width: 100%" required></textarea>
-    <br>
-    <br>
-    <input type="submit" value="Submit"/>
+          <label for="title" style="font-size: 1.4em;"><big>Title:</big></label>
+             <br>
+               <input id="title" type="text"
+                name="title" maxlength="20" style="width: 100%" required>
+             <br>
+         <br/>
+    <label for="text" style="font-size: 1.4em;"><big>Text: </big></label>
+      <br>
+         <textarea name="text" id="text" style="width: 100%" required></textarea>
+      <br/>
+     <br>
+   <input type="submit" value="Submit"/>
 </form></div>
     </div>
     </div>
