@@ -39,7 +39,7 @@ def home(request):
     return render(request, 'home.html')
 
 
-def flexbox(request):
+def applications(request):
     return render(request, 'Applications.html')
 
 
