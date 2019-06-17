@@ -14,21 +14,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
 </head>
-<body style="font-family: Raleway, sans-serif; background-color: brown;">
-<header>
-    <h1 id="myh1"><i>ToDo List</i></h1>
-    <hr>
-</header>
-<ul>
-    {%for todo in todos %}
-    <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: <b>{{todo.text}}</b></li>
-    {% endfor %}
-</ul>
-<a href="todos/add/">Add Todo</a>
-<br>
-<a href="/apps">Applications</a>
-<br/>
-<a href='/'>Home</a>
-</body>
-
+  <body style="font-family: Raleway, sans-serif; background-color: brown;">
+     <header>
+        <h1 id="myh1"><i>ToDo List</i></h1>
+      <hr>
+    </header>
+  <ul>
+{%for todo in todos %}
+   <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: <b>{{todo.text}}</b></li>
+{% endfor %}
+  </ul>
+      <a href="todos/add/">Add Todo</a>
+         <br>
+      <a href="/apps">Applications</a>
+   <br/>
+ <a href='/'>Home</a>
+ </body>
 </html>
