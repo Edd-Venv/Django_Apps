@@ -1,8 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.shortcuts import redirect
-from django.http import HttpResponseRedirect
-
 from .models import Todo
 from .models import Bills
 
@@ -84,5 +81,46 @@ def detailsBills(request, pk):
                }
 
     return render(request, 'detailsBills.html', context)
+
+# Recipe Views below
+
+def recipe_view(request):
+    recipes = Recipe.objects.all()[:10]
+    context = {
+        'recipes': recipes
+    }
+    return render(request, "recipes.html", context)
+
+
+def details_recipe(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    context = {'recipe': recipe
+               }
+
+    return render(request, 'details_recipe.html', context)
+
+
+def deleterecipe(request, pk):
+    recipe_to_delete = Recipe.objects.get(pk=pk)
+    if request.method == 'POST':
+        recipe_to_delete.delete()
+        return redirect('/apps/recipes/')
+    else:
+        return render(request, 'details_recipe.html')
+
+
+def addrecipe(request):
+    if request.method == 'POST':
+        new_user_title = request.POST.get('title')
+        new_user_ingredients = request.POST.get('ingredients')
+        new_user_cook = request.POST.get('cook')
+
+        r = Recipe(title=new_user_title, ingredients=new_user_ingredients,
+                   cook=new_user_cook)
+        r.save()
+
+        return redirect('/apps/recipes/')
+    else:
+        return render(request, 'addRecipe.html')
 
 
