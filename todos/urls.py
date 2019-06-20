@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from .views import redirect_view
 from .views import deletetodo
+from .views import deleterecipe
 
 app_name = 'todos'
 urlpatterns = [
@@ -16,4 +17,9 @@ urlpatterns = [
     path('apps/bills/amounts/', views.addamount, name='addamount'),
     path('amounts/', views.addamount, name='addamount'),
     path('deletetodo/<int:pk>/', deletetodo),
+    path('apps/recipes/', views.recipe_view, name='recipe_view'),
+    path('recipe/details_recipe/<int:pk>', views.details_recipe, name='details_recipe'),
+    path('deleterecipe/<int:pk>/', deleterecipe),
+    path('recipe/addrecipe/', views.addrecipe, name='addrecipe'),
+    path('addrecipe/', views.addrecipe, name='addrecipe'),
 ]
