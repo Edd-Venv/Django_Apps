@@ -18,3 +18,14 @@ class Bills(models.Model):
 
     def __str__(self):
         return '%s %s' % (self.title, self.amount)
+    
+    
+
+class Recipe(models.Model):
+    title = models.CharField(max_length=30)
+    ingredients = models.TextField()
+    cook = models.TextField()
+    created_at = models.DateField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        return self.title
