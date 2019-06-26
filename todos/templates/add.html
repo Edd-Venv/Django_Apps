@@ -1,61 +1,77 @@
 {% load static %}
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Todo Application.">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/style.css'%}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Todo Application." />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" />
 
     {% include 'bootstrap.html' %}
-    
-    </head>
-<header>
-       <h1><i><big>New Todo </big></i></h1>
-      <hr/>
-</header>
-<body style="background-color: brown;">
-<main>
-    <div class = "flex-container">
-        <div style=" background: brown;
+  </head>
+  <header>
+    <h1>
+      <i><big>New Todo </big></i>
+    </h1>
+    <hr />
+  </header>
+  <body style="background-color: brown;">
+    <main>
+      <div class="flex-container">
+        <div
+          style=" background: brown;
                      border: 2px solid grey;
                      width: 20%; height: 40%;
                      margin-top: 8%;
                      margin-left: 40%;
                      padding-bottom: 20%;
                      box-shadow: 2px 2px 2px grey;
-                     align-content: flex-end;" >
-            
-<form action="/add/" method="post">
-    {% csrf_token %}
-          <label for="title" style="font-size: 1.4em;"><big>Title:</big></label>
-             <br>
-               <input id="title" type="text"
-                name="title" maxlength="20" style="width: 100%" required>
-             <br>
-         <br/>
-    <label for="text" style="font-size: 1.4em;"><big>Text: </big></label>
-      <br>
-         <textarea name="text" id="text" style="width: 100%" required></textarea>
-      <br/>
-     <br>
-   <input type="submit" value="Submit"/>
-</form>
-    </div>
+                     align-content: flex-end;"
+        >
+          <form action="/add/" method="post">
+            {% csrf_token %}
+            <label for="title" style="font-size: 1.4em;"
+              ><big>Title:</big></label
+            >
+            <br />
+            <input
+              id="title"
+              type="text"
+              name="title"
+              maxlength="20"
+              style="width: 100%"
+              required
+            />
+            <br />
+            <br />
+            <label for="text" style="font-size: 1.4em;"
+              ><big>Text: </big></label
+            >
+            <br />
+            <textarea
+              name="text"
+              id="text"
+              style="width: 100%"
+              required
+            ></textarea>
+            <br />
+            <br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
-       </div>
-   </main>
+    </main>
   </body>
-<br>
-   <br>
-      <br>
-         <br>
-      <br>
-   <br>
-<br>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
-<footer>
+  <footer>
     <a href="/todos/" style="color:white;">
-        <input type="submit" value="Cancel"/></a>
-    </footer>
+      <input type="submit" value="Cancel"
+    /></a>
+  </footer>
 </html>
