@@ -1,48 +1,90 @@
-{% load static %}
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Applications</title>
 
-    {% include 'bootstrap.html' %}  
-    
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/FlexBox.css'%}"/>
+    {% include 'bootstrap.html' %}
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/FlexBox.css'%}"
+    />
   </head>
+
   <header>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <h1 style="color: Black;"></h1>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-       </button>
-     <div style="float: left" class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/Edd-Venv/Django_Apps.git" target="_blank">Github Code</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        style="float: left"
+        class="collapse navbar-collapse"
+        id="collapsibleNavbar"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://github.com/Edd-Venv/Django_Apps.git"
+              target="_blank"
+              >Github Code</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
-    <br>
-      <br/>
+
+  <br />
+
+  <br />
+
   <body>
- <main>
-   </div>
-      <div class ="flex-container">
-        <div class="box2"><a href="bills/">
-          <img style="border-radius: 50px" width="100%" src="{% static 'css/pln1.jpg' %}" alt="Picture Of Zolty symbol" /></a>
+    <main>
+      <div class="flex-container">
+        <div class="box2">
+          <a href="bills/">
+            <img
+              style="border-radius: 50px"
+              width="100%"
+              src="{% static 'css/pln1.jpg' %}"
+              alt="Picture Of Zolty symbol"
+          /></a>
         </div>
-          <div class="box2"><a href="todos/">
-            <img width="100%" src="{% static 'css/Todo1.jpg' %}" style="border-radius: 50px" alt="Picture of Todo"/></a>
-          </div>
-            <div class="box2"><a href="recipes/">
-             <img width="100%" src="{% static 'css/recipe1.png' %}" style="border-radius: 50px" alt="Picture of food"/></a>
-             </div>
-    </div>
+
+        <div class="box2">
+          <a href="todos/">
+            <img
+              width="100%"
+              src="{% static 'css/Todo1.jpg' %}"
+              style="border-radius: 50px"
+              alt="Picture of Todo"
+          /></a>
+        </div>
+
+        <div class="box2">
+          <a href="recipes/">
+            <img
+              width="100%"
+              src="{% static 'css/recipe1.png' %}"
+              style="border-radius: 50px"
+              alt="Picture of food"
+          /></a>
+        </div>
+      </div>
     </main>
   </body>
 </html>
