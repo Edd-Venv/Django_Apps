@@ -1,29 +1,55 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recipe Application.">
-    <title> Recipe Details Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {% include 'bootstrap.html' %}
-    
+  <meta name="description" content="Recipe Application." />
+
+  <title>Recipe Details Page</title>
+
+  {% include 'bootstrap.html' %}
 </head>
-  <body style="background-color: brown; color: black;">
-    <main>
-      <h1>Recipe Name: <i>{{recipe.title}}</i></h1>
-        <br/>
-          <p style="font-size: 1.5em;"><big>Ingredients:</big><br> <i>{{recipe.ingredients}}</i></p>
-            <br/>
-              <br/>
-                <p style="font-size: 1.5em;"><big>How to prepare:</big><br> <i>{{recipe.cook}}</i></p>
-                  <br/>
-                   <p><big>Created on {{ recipe.created_at}}</big></p>
-                 <br/>
-                </main>
-            <form action="/deleterecipe/{{recipe.id}}/"method="POST">
-           {% csrf_token %}
-        <input type='submit' value="Delete" />
-    </form>
+
+<body style="background-color: brown; color: black;">
+  <main>
+    <h1>
+      Recipe Name: <i>{{ recipe.title }}</i>
+    </h1>
+
+    <br />
+
+    <p style="font-size: 1.5em;">
+      <big>Ingredients:</big><br />
+      <i>{{ recipe.ingredients }}</i>
+    </p>
+
+    <br />
+
+    <br />
+
+    <p style="font-size: 1.5em;">
+      <big>How to prepare:</big><br />
+      <i>{{ recipe.cook }}</i>
+    </p>
+
+    <br />
+
+    <p>
+      <big>Created on {{ recipe.created_at }}</big>
+    </p>
+
+    <br />
+  </main>
+
+  <form action="/deleterecipe/{{ recipe.id }}/" method="POST">
+    {% csrf_token %}
+
+    <input type="submit" value="Delete" />
+  </form>
 </body>
- <br>
-   <a href="/apps/recipes/">Recipes</a>
-    <br/>
+
+<br />
+
+<a href="/apps/recipes/">Recipes</a>
+
+<br />
+
 <a href="/">Home</a>
