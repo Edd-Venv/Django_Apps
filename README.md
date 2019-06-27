@@ -1,2 +1,2 @@
 # Django_Apps
-Site with a Todo Applications and a Bills counter, both are underdevelopent.
+My WebApplications namely a Todo App, Recipe App and a Bills App, All are under constant development. 
