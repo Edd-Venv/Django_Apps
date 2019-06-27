@@ -1,17 +1,16 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bills Application.">
-    <title>Details Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bills Application." />
+  <title>Details Page</title>
 
-    {% include 'bootstrap.html' %}
-
+  {% include 'bootstrap.html' %}
 </head>
-  <h1>{{bill.title}}</h1>
-    <br/>
-      <p>{{bill.amount}}</p>
-    <br/>
-Created on {{ bill.created_at}}
-  <br/>
-    <a href="/bills/">Bill's</a>
-  <br/>
+<h1>{{ bill.title }}</h1>
+<br />
+<p>{{ bill.amount }}</p>
+<br />
+Created on {{ bill.created_at }}
+<br />
+<a href="/bills/">Bill's</a>
+<br />
 <a href="/">Home</a>
