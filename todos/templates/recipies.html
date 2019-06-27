@@ -1,34 +1,43 @@
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Recipes Page</title>
-    <link rel="stylesheet" type="text/css"
-       href="{% static 'css/style.css'%}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recipes Page.">
-    
-{% include 'bootstrap.html' %}
-</head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Recipes Page." />
+
+    {% include 'bootstrap.html' %}
+  </head>
   <header>
     <div style="Background-color: black;">
-       <h1 style="color: brown;"><i>Recipes</i></h1>
-         </div>
-       <div style="margin-left: 80%;">
-     <form action="http://www.google.com/search" method="GET" target="_blank">
-       <input type='text' name='q' placeholder="Recipe Search"/>
-        <input type="submit" value="Search"/>
+      <h1 style="color: brown;"><i>Recipes</i></h1>
+    </div>
+    <div style="margin-left: 80%;">
+      <form action="http://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Recipe Search" />
+        <input type="submit" value="Search" />
       </form>
     </div>
-</header>
-<br>
-   <br/>
-<body id="test">
-   <main style="color: black;">
-    <ul style="font-family: Raleway, sans-serif; font-size: 1.4em; background-color: rgba(0, 151, 19, 0);">
-      {%for recipe in recipes %}
-        <li><big><a href="/recipe/details_recipe/{{recipe.id}}">
-        {{recipe.title}}
-       </a></big>
-    </li><br>
-   {% endfor %}
+  </header>
+  <br />
+  <br />
+  <body id="test">
+    <main style="color: black;">
+      <ul
+        style="font-family: Raleway, sans-serif; font-size: 1.4em; background-color: rgba(0, 151, 19, 0);"
+      >
+        {%for recipe in recipes %}
+        <li>
+          <big
+            ><a href="/recipe/details_recipe/{{ recipe.id }}">
+              {{ recipe.title }}
+            </a></big
+          >
+        </li>
+        <br />
+        {% endfor %}
+      </ul>
+    </main>
+  </body>
+</html>
