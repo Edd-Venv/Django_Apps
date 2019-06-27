@@ -1,66 +1,73 @@
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Home Page</title>
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/style.css'%}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home Page.">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Home Page." />
 
     {% include 'bootstrap.html' %}
-    
-</head>
+  </head>
   <body style="background-color: brown;">
-    <div style="font-family: Raleway, sans-serif; box-sizing: border-box;
+    <div
+      style="font-family: Raleway, sans-serif; box-sizing: border-box;
        padding-bottom: 25px; margin-left: 1px;"
-        class="div1">
-        <h1><b><i>WELCOME</i></b></h1>
+      class="div1"
+    >
+      <h1>
+        <b><i>WELCOME</i></b>
+      </h1>
     </div>
-  <div style="box-sizing: border-box; border: 30%px" class="topnav">
-    <a class="active" href="/apps/"><big>Applications</big></a>
+    <div style="box-sizing: border-box; border: 30%px" class="topnav">
+      <a class="active" href="/apps/"><big>Applications</big></a>
       <a href="admin/">Admin Site</a>
-       <a href="#contact">Contact Us</a>
-      </div>
-  </div>
- <main>
-   <br>
-     <br>
-       <br>
-      <br>
-     <br>
-    <p style="font-size: 1.4em;">Welcome to my website where I post some of my WebApplications.
-        Please note that some of the Applications are currently under Development.
-        Currently only the Todo Application is fully functional. The WebApplications are built
-        using <big>Python, Django, HTML5, CSS3</big> and <big>Bootstrap.</big>
-    </p>
-<p style="font-size: 1.4em;">Also not that some buttons are dummy buttons i.e Facebook and Linkedlin</p>
-  <p><big>To login to the Admin Site:</big></p>
-    <ul style="font-size: 1.2em">
-        <li>Login Name: Visitor </li>
-        <li>Password: Staff2019 </li>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <main>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p style="font-size: 1.4em;">
+        Welcome to my website where I post some of my WebApplications. Please
+        note that some of the Applications are currently under Development.
+        Currently only the Todo Application is fully functional. The
+        WebApplications are built using
+        <big>Python, Django, HTML5, CSS3</big> and <big>Bootstrap.</big>
+      </p>
+      <p style="font-size: 1.4em;">
+        Also not that some buttons are dummy buttons i.e Facebook and Linkedlin
+      </p>
+      <p><big>To login to the Admin Site:</big></p>
+      <ul style="font-size: 1.2em">
+        <li>Login Name: Visitor</li>
+        <li>Password: Staff2019</li>
+      </ul>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </main>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+  <footer>
+    <ul
+      style="background-color: black; padding: 10px 10px 10px 10px; width:25%;"
+    >
+      <li style="display:inline;"><a href="admin/">Admin Site</a></li>
+      <li style="display:inline;"><a href="">Contact Us</a></li>
+      <li style="display:inline;"><a href>FaceBook</a></li>
+      <li style="display:inline;"><a href>Linkedln</a></li>
     </ul>
-  <br>
-<br>
-  <br>
-    <br>
-      <br>
-     <br>
-   <br>
- <br>
-</main>
-<br>
-  <br>
-    <br>
-   <br>
- <br>
-</body>
-<footer>
-     <ul style="background-color: black; padding: 10px 10px 10px 10px; width:25%;">
-       <li style="display:inline;"><a href="admin/">Admin Site</a></li>
-         <li style="display:inline;"><a href="">Contact Us</a></li>
-           <li style="display:inline;"><a href>FaceBook</a></li>
-            <li style="display:inline;"><a href>Linkedln</a></li>
-     </ul>
- </footer>
+  </footer>
 </html>
