@@ -1,22 +1,27 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Todo Application.">
-    <title>Details Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Todo Application." />
+  <title>Details Page</title>
 
-    {% include 'bootstrap.html' %}
-
+  {% include 'bootstrap.html' %}
 </head>
-   <body style="background-color: brown;">
-      <main>
-          <h1>Todo: <i>{{todo.title}}</i></h1>
-            <br/>
-              <p style="font-size: 1.5em;">Todo Information: <i>{{todo.text}}</i></p>
-                <br/>
-              <p><big>Created on {{ todo.created_at}}</big></p>
-           <br/>
-         </main>
-       </body>
-     <br>
-   <a href="/todos/">Todo's</a>
-  <br/>
- <a href="/">Home</a>
+<body style="background-color: brown;">
+  <main>
+    <h1>
+      Todo: <i>{{ todo.title }}</i>
+    </h1>
+    <br />
+    <p style="font-size: 1.5em;">
+      Todo Information: <i>{{ todo.text }}</i>
+    </p>
+    <br />
+    <p>
+      <big>Created on {{ todo.created_at }}</big>
+    </p>
+    <br />
+  </main>
+</body>
+<br />
+<a href="/todos/">Todo's</a>
+<br />
+<a href="/">Home</a>
